@@ -1,0 +1,44 @@
+* {
+    margin: 30px;
+    padding: 20px;
+  }
+  
+  body {
+    background-color: #5f5980;
+    font-family: 'Lora', serif;
+  }
+  
+  nav {
+    margin: auto;
+  }
+
+  h1 {
+    max-width: fit-content;
+    font-size: 3em;
+    margin: 0 auto;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    max-width: fit-content;
+    font-size: 2em;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    font-size: 2em;
+  }
+
+  h5,
+  li {
+    font-size: 1em;
+  }
+
+  img {
+    max-width: fit-content;
+    margin: auto;
+  }
+
+
+
