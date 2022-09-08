@@ -1,0 +1,195 @@
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+:root{
+  /* first two colours come from Kuroi's Manga Pallete Palette */
+  /* https://lospec.com/palette-list/manga-pallete */
+  /*Font and Colours used in the page*/
+  --col-01:#171219;
+  --col-02:#f2fbeb;
+  --col-03:#5252ff;
+  --col-04:#b6e878;
+  font-size: 16px;
+  font-family: 'Georgia', serif;
+  scroll-behavior: smooth;
+}
+
+/*Body, Header and Paragraph Styles*/
+body{
+  padding: 1rem;
+  background-color: var(--col-02);
+  color: var(--col-01);
+  transition: color ease-in 1s;
+}
+
+section{
+  margin-bottom: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+  transition: 0.5s;
+}
+
+h1:hover{
+  color:var(--col-04);
+  animation: colourCycle 2s ease-in infinite;
+}
+
+/*I changed the colours so they were the same ones from the colour palette above.
+This hopefully achieves a sense of cohesion throughout the page.*/
+@keyframes colourCycle {
+  0%{color: #171219}
+  50%{color: #b6e878}
+  100%{color: #5252ff}
+}
+
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+figcaption{
+  width: fit-content;
+}
+
+dl ul{
+  margin-bottom: 0;
+}
+
+/*Side-bar Styles*/
+.sidenav{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #171219;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+
+/*I added motion through the transition of the side-bar.
+Upon clicking on the List of Contents, the side-bar appears on the left.
+As the user hovers and focuses, there is a colour change in the respective text.*/
+.sidenav a{
+  padding: 8px 8px 8px 32px;
+  text-decoration-color: #171219;
+  font-size: 25px;
+  color: #f2fbeb;
+  display: block;
+  transition: 1s;
+}
+
+.sidenav a:hover{
+  color: #5252ff;
+}
+
+.sidenav.closebtn{
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/*The motion is further enhanced, with the main body of content moving to the right, 
+when the side-bar appears from the left.*/
+#main{
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/*Button Styles*/
+.button{
+  background-color: #171219;
+  border: none;
+  color: #f2fbeb;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.button{
+  font-family: 'Georgia', serif;
+  font-style: oblique;
+}
+
+/*I also added a colour change when the user hovers and focuses on the buttons, 
+List of Contents and Dark Mode. This way, it matches the changes in the side-bar.*/
+.button:hover,
+.button:focus{
+  color: #5252ff;
+  transition: 1s;
+}
+
+/*Display of other elements to the page, such as images*/
+dd{
+  padding-left: 60px;
+}
+
+li ul{
+  padding-left: 40px;
+}
+
+.img-wrapper{
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.img-figure{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-img{
+  width: 80%;
+}
+
+.res-columns{
+  column-width: 25rem;
+}
+
+/* medium devices 600 - 992 */
+@media only screen and (min-width: 600px) {
+  :root{
+    font-size: 20px;
+  }
+  
+  .img-wrapper{
+    width: 75%;
+    margin: 1.5rem auto;
+  }
+}
+
+/* medium devices 992 + */
+@media only screen and (min-width: 992px) {
+  :root{
+    font-size: 24px;
+  }
+
+  .img-wrapper{
+    max-width: fit-content;
+    float: right;
+    margin: 1.5rem;
+  }
+}
+
+/*Helps to detect if the user has turned on reduced motion in the animations or not, enhancing accessibility.*/
+@media all and (prefers-reduced-motion){
+:root{
+  scroll-behavior: auto;
+} 
+}
