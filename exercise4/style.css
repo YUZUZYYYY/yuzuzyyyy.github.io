@@ -13,6 +13,9 @@ body {
   background: #F9B9C3;
 }
 
+/*I changed the colour and font to stylise the website. Varying shades of pink were chosen to complement the green in the video.
+To further enhance the casual and creative atmosphere of the video,the font, DM Sans was chosen to emulate this.*/
+
 h1 {
   top: 50%;
   width: 100%;
@@ -34,6 +37,8 @@ p {
   margin-left: 50%;
   color: #934954;
 }
+
+/*The heading, video and attributiosn are placed in the middle to make the website seem organised and simple to navigate. After all, the main point of the website here is to convey the tutorial of making a windmill.*/
 
 .player {
   position: absolute;
