@@ -186,3 +186,5 @@ var vid = document.getElementById("media");
 function setPlaySpeed(){ 
     vid.playbackRate = 0.5;
 }
+
+/*This is the code for slowing down the playback speed of the video.*/
