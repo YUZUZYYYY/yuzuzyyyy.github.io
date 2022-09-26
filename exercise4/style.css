@@ -1,0 +1,147 @@
+@font-face {
+    font-family: 'HeydingsControlsRegular';
+    src: url('fonts/heydings_controls-webfont.eot');
+    src: url('fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/heydings_controls-webfont.woff') format('woff'),
+         url('fonts/heydings_controls-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: #F9B9C3;
+}
+
+h1 {
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: #934954;
+}
+
+video {
+  position: relative;
+  padding-left: 20%;
+  padding-right: 20%;
+  
+}
+
+p {
+  position: relative;
+  margin-left: 50%;
+  color: #934954;
+}
+
+.player {
+  position: absolute;
+}
+
+.video-controls {
+  visibility: hidden;
+  opacity: 0;
+  width: 800px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -200px;
+  transition: 1s all;
+  display: flex;
+}
+
+.audio-controls {
+  visibility: hidden;
+  opacity: 1;
+  width: 400px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: #F9B9C3;
+  box-shadow: 3px 3px 5px #F9B9C3;
+  transition: 1s all;
+  display: flex;
+}
+
+button, .controls {
+  background-color: #F9B9C3;
+}
+
+.player:hover .controls, player:focus .controls {
+  opacity: 1;
+}
+
+button:before {
+  font-family: HeydingsControlsRegular;
+  font-size: 20px;
+  position: relative;
+  content: attr(data-icon);
+  color: white;
+  text-shadow: 1px 1px 0px #F9B9C3;
+}
+
+.play:before {
+  font-size: 22px;
+}
+
+
+button, .timer {
+  height: 38px;
+  line-height: 19px;
+  box-shadow: inset 0 -5px 25px #F9B9C3;
+  border-right: 1px solid #F9B9C3;
+}
+
+button {
+  position: relative;
+  border: 0;
+  flex: 1;
+  outline: none;
+}
+
+.play {
+  border-radius: 10px 0 0 10px;
+}
+
+.fwd {
+  border-radius: 0 10px 10px 0;
+}
+
+.timer {
+  line-height: 38px;
+  font-size: 10px;
+  font-family: monospace;
+  text-shadow: 1px 1px 0px #F9B9C3;
+  color: white;
+  flex: 5;
+  position: relative;
+}
+
+.timer div {
+  position: absolute;
+  background-color: #C27C86;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 38px;
+  z-index: 2;
+}
+
+.timer span {
+  position: absolute;
+  z-index: 3;
+  left: 19px;
+}
+
+button:hover,button:focus {
+  box-shadow: inset 1px 1px 2px #C27C86;
+}
+
+button:active {
+  box-shadow: inset 3px 3px 2px #C27C86;
+}
+
+.active:before {
+  color: #934954;
+}
