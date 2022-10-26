@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+    <body>
+        <!--I have divided a total of 15 buttons into 3 containers. This is so that I can refer to them easily in CSS, as I position them on the website.-->
+        <div class="container">
+            <button id="button1"></button>
+            <button id="button2"></button>
+            <button id="button3"></button>
+            <button id="button4"></button>
+            <button id="button5"></button>
+            
+        </div>
+
+        <div class="topcontainer">
+            <button id="button6"></button>
+            <button id="button7"></button>
+            <button id="button8"></button>
+            <button id="button9"></button>
+            <button id="button10"></button>
+        </div>
+
+        <div class="bottomcontainer">
+            <button id="button11"></button>
+            <button id="button12"></button>
+            <button id="button13"></button>
+            <button id="button14"></button>
+            <button id="button15"></button>
+        </div>
+
+        <!--Here is the SVG filter used to distort the buttons. 
+            This effect imitates the rippling of water by changing the shape of the buttons, when the user hovers over them, which has been explored in CSS.-->
+
+        <svg>
+            <defs>
+                <filter id="wave">
+                    <feTurbulence type='fractalNoise' baseFrequency='0.0001 2' 
+                    numOctaves='1' result='warp' />
+                    <feDisplacementMap xChannelSelector='R' yChannelSelector='G' scale='30'
+                    in='SourceGraphic' in2='warpOffset' />
+
+                </filter>
+            </defs>
+        </svg>
+
+        <!--I have added an addition of 8 illustrations of lilypads that do not move. They work to add to the detail of the environment on the website.s-->
+        <img class="lilypad1" src="/img/lilypad.png">
+        <img class="lilypad2" src="/img/lilypad.png">
+        <img class="lilypad3" src="/img/lilypad.png">
+        <img class="lilypad4" src="/img/lilypad.png">
+
+        <img class="lilypad5" src="/img/lilypad.png" height="150px">
+        <img class="lilypad6" src="/img/lilypad.png" height="150px">
+        <img class="lilypad7" src="/img/lilypad.png" height="150px">
+        <img class="lilypad8" src="/img/lilypad.png" height="150px">
+
+        <!--I have also added 3 frogs and dragonflies to further enhance the lake environment.-->
+
+        <img class="frog1" src="./img/frog.png" height="150px">
+        <img class="frog2" src="./img/frog.png" height="150px">
+        <img class="frog3" src="./img/frog.png" height="150px">
+
+        <img class="dragonfly" src="./img/dragonfly.png" height="100px" width="100px">
+        <img class="dragonfly" src="./img/dragonfly.png" height="100px" width="100px">
+        <img class="dragonfly" src="./img/dragonfly.png" height="100px" width="100px">
+
+        <!--This is the audio to set the ambience of the lake on the website. 
+            It should play automatically on browsers except for Chrome, which is why I added the controls bar, so that Chrome users can also plays the audio.-->
+
+        <audio autoplay class="audio-player" controls>
+            <source src="sound/lakeambience.wav">
+        </audio>
+
+        <div class="credits">
+           <p>
+            Website by Yizi Shao
+           </p> 
+           <p>
+            Codes from Patrick McMahon and Franks laboratory (YouTube)
+            <!--via https://web.microsoftstream.com/video/4d76ca25-b6e9-442c-bc5e-80638c3dd4b7 and
+                https://www.youtube.com/watch?v=qtc_tevOYZ4&ab_channel=Frankslaboratory respectively-->
+           </p>
+           <p>
+            Background Audio from Soundsnap
+            <!--via https://www.soundsnap.com/nature_ambience_lake_safp_northern_territory_australia_prominent_white_ducks_dusk_evening_insects_flies_1-->
+           </p>
+        </div>
+
+       <script src="script.js"></script>
+
+    </body>
+
+</html>

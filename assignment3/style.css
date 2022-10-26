@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Here is my colour palette. I chose varying shades of green, as it is usually associated with lakes. 
+Further, the colours are muted, which creates a sense of relaxation.*/
+:root {
+    --colour-one: #3f685d;
+    --colour-two: #749F82;
+    --colour-three: #90B77D;
+}
+
+/*Using my colour palette, I established the background of the website.*/
+body {
+    background-image: linear-gradient(#749F82,#90B77D);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: luminosity;
+}
+
+/*I added illustrations of frogs to add to the detail of the environment.*/
+.frog1{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: rotate(20deg);
+}
+
+.frog2{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    transform: rotate(340deg);
+}
+
+.frog3{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+}
+
+/*I stylised all lilypads individually to ensure their positions and angle were different and spread out on the website.*/
+.lilypad1{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+.lilypad2{
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    transform: rotate(180deg);
+}
+
+.lilypad3{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    transform: rotate(240deg);
+}
+
+.lilypad4{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    transform: rotate(90deg);
+}
+
+.lilypad5{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+}
+
+.lilypad6{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    transform: rotate(330deg);
+}
+
+.lilypad7{
+    position: absolute;
+    bottom: 30%;
+    right: 25%;
+    transform: rotate(270deg);
+}
+
+.lilypad8{
+    position: absolute;
+    bottom: 20%;
+    right: 50%;
+    transform: rotate(75deg);
+}
+
+/*This container included the buttons that were shaped to be like lilypads.
+ I stylised them to be mainly in the central part of the website, as it is likely to be where the user will move their mouse.
+ This way, they would notice the animations of the 'lilypads', creating a sense of movement, similar to the water rippling.*/
+.container {
+    width: 1500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.topcontainer {
+    width: 1500px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.bottomcontainer {
+    width: 1500px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-around;
+}
+
+button {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
+    border-radius: none;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 40px;
+    color: white;
+}
+
+button:before {
+    content: '';
+    background: var(--colour-one);
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    filter: url('#wave');
+}
+
+button:hover:before {
+    filter: url('#wave');
+}
+
+button:hover {
+    animation: squish 0.5s;
+}
+
+@keyframes squish{
+    0%{
+        transform: scaleY(1);
+    }
+    60%{
+        transform: scaleY(1.2);
+    }
+    80%{
+        transform: scaleY(0.9);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+}
+
+/*Here is the stylisation of the moving dragonflies.*/
+.dragonfly{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes moveSpecimen{
+    0% {
+        left: 0%;
+        top: 0%;
+    }
+    100% {
+        left: 70%;
+        top: 80%;
+    }
+}
+
+/*Here is the positioning of the audio player.*/
+.audio-player{
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+}
+
+/*Here is the positioning and stylisation of the credits at the bottom of the page.*/
+.credits{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    position: absolute;
+    text-align: center;
+    bottom: 0%;
+    left: 60%;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
