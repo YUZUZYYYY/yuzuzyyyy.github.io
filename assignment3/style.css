@@ -97,7 +97,7 @@ body {
 }
 
 /*This container included the buttons that were shaped to be like lilypads.
- I stylised them to be mainly in the central part of the website, as it is likely to be where the user will move their mouse.
+I stylised them to be spread out on the website, so the user's movements will activate the animations.
  This way, they would notice the animations of the 'lilypads', creating a sense of movement, similar to the water rippling.*/
 .container {
     width: 1500px;
